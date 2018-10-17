@@ -305,6 +305,10 @@ var myObj = {
     "congratulations": "Normally this would be in comments but it isn't, congrats for finding the passwords and yeah, I was one of the students working on this file, use the data as you want"
 };
 
-// var temp = JSON.parse(myObj);
-// temp["club"].push({"teamId":"4","status":"pending"});
-// myObj = JSON.stringify(temp);
+ var temp = JSON.parse(myObj);
+ temp["club"].push({"teamId":"4","status":"pending"});
+ myObj = JSON.stringify(temp);
+
+// https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
+
+// https://www.w3schools.com/js/js_json_parse.asp
