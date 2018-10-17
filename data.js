@@ -1,4 +1,4 @@
-{
+var myObj = {
     "clubs": [
         {
         "Club Name": "Model UN",
@@ -303,5 +303,8 @@
     "emailID": "annoucements-ny@avenues.org",
     "emailPassword": "what password",
     "congratulations": "Normally this would be in comments but it isn't, congrats for finding the passwords and yeah, I was one of the students working on this file, use the data as you want"
-}
+};
 
+// var temp = JSON.parse(myObj);
+// temp["club"].push({"teamId":"4","status":"pending"});
+// myObj = JSON.stringify(temp);
