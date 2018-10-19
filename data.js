@@ -305,23 +305,57 @@ const myObj =
  };
 
  for (let i = 0; i < myObj.clubs.length; i++) {
-     const paragraph = document.createElement('p'); //creates a paragraph type in the html file from the JS file
      const clubDivs = document.createElement('div');
      document.body.appendChild(clubDivs); //puts the div type element created into the body
-     clubDivs.classList.add('Clubs');
-     paragraph.classList.add('Club Name');
      clubList = document.getElementsByClassName('Clubs');
-    //  clubNames = document.getElementsByClassName('Club Name');
+     clubDivs.classList.add('Clubs');
+    
+     const clubNameParagraph = document.createElement('p'); //creates a paragraph type in the html file from the JS file
+     clubNameParagraph.classList.add('club-name');
+     clubNames = document.getElementsByClassName('club-name');
 
-    clubList[i].appendChild(paragraph);
-    // clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
+   
+     const clubFacultyAdvisor = document.createElement('p');
+     clubFacultyAdvisor.classList.add('faculty-advisor');
+
+     const clubDay = document.createElement('p');
+     clubDay.classList.add('club-day');
      
+     const clubTime = document.createElement('p');
+     clubTime.classList.add('club-time');
+
+    const clubRoom = document.createElement('p');
+    clubRoom.classList.add('club-room');
+
+    const clubDescription = document.createElement('p');
+    clubDescription.classList.add('club-description'); 
+
      
-     myObj.clubs[i]["Faculty Advisor"];
-     myObj.clubs[i]["Day"];
-     myObj.clubs[i]["Time"];
-     myObj.clubs[i]["Room"];
-     myObj.clubs[i]["Club Description"];
+
+     clubList[i].appendChild(clubNameParagraph);
+     clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
+
+     clubList[i].appendChild(clubFacultyAdvisor);
+     clubNames[i].innerHTML = myObj.clubs[i]["Faculty Advisor"];
+
+     clubList[i].appendChild(clubDay);
+     clubNames[i].innerHTML = myObj.clubs[i]["Day"];
+
+     clubList[i].appendChild(clubTime);
+     clubNames[i].innerHTML = myObj.clubs[i]["Time"];
+
+     clubList[i].appendChild(clubRoom);
+     clubNames[i].innerHTML = myObj.clubs[i]["Room"];
+
+     clubList[i].appendChild(clubDescription);
+     clubNames[i].innerHTML = myObj.clubs[i]["Club Description"];
+
+
+
+
+
+
+
 }
 
 
