@@ -304,7 +304,25 @@ const myObj =
     "congratulations":"Normally this would be in comments but it isn't, congrats for finding the passwords and yeah, I was one of the students working on this file, use the data as you want"
  };
 
- 
+ for (let i = 0; i < myObj.clubs.length; i++) {
+     const paragraph = document.createElement('p'); //creates a paragraph type in the html file from the JS file
+     const clubDivs = document.createElement('div');
+     document.body.appendChild(clubDivs); //puts the div type element created into the body
+     clubDivs.classList.add('Clubs');
+     paragraph.classList.add('Club Name');
+     clubList = document.getElementsByClassName('Clubs');
+    //  clubNames = document.getElementsByClassName('Club Name');
+
+    clubList[i].appendChild(paragraph);
+    // clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
+     
+     
+     myObj.clubs[i]["Faculty Advisor"];
+     myObj.clubs[i]["Day"];
+     myObj.clubs[i]["Time"];
+     myObj.clubs[i]["Room"];
+     myObj.clubs[i]["Club Description"];
+}
 
 
 
@@ -313,44 +331,44 @@ const myObj =
 // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
 // stored credentials.
 
-var event = {
-    'summary': 'Google I/O 2015',
-    'location': '800 Howard St., San Francisco, CA 94103',
-    'description': 'A chance to hear more about Google\'s developer products.',
-    'start': {
-      'dateTime': '2015-05-28T09:00:00-07:00',
-      'timeZone': 'America/Los_Angeles'
-    },
-    'end': {
-      'dateTime': '2015-05-28T17:00:00-07:00',
-      'timeZone': 'America/Los_Angeles'
-    },
-    'recurrence': [
-      'RRULE:FREQ=DAILY;COUNT=2'
-    ],
-    'attendees': [
-      {'email': 'lpage@example.com'},
-      {'email': 'sbrin@example.com'}
-    ],
-    'reminders': {
-      'useDefault': false,
-      'overrides': [
-        {'method': 'email', 'minutes': 24 * 60},
-        {'method': 'popup', 'minutes': 10}
-      ]
-    }
-  };
+// var event = {
+//     'summary': 'Google I/O 2015',
+//     'location': '800 Howard St., San Francisco, CA 94103',
+//     'description': 'A chance to hear more about Google\'s developer products.',
+//     'start': {
+//       'dateTime': '2015-05-28T09:00:00-07:00',
+//       'timeZone': 'America/Los_Angeles'
+//     },
+//     'end': {
+//       'dateTime': '2015-05-28T17:00:00-07:00',
+//       'timeZone': 'America/Los_Angeles'
+//     },
+//     'recurrence': [
+//       'RRULE:FREQ=DAILY;COUNT=2'
+//     ],
+//     'attendees': [
+//       {'email': 'lpage@example.com'},
+//       {'email': 'sbrin@example.com'}
+//     ],
+//     'reminders': {
+//       'useDefault': false,
+//       'overrides': [
+//         {'method': 'email', 'minutes': 24 * 60},
+//         {'method': 'popup', 'minutes': 10}
+//       ]
+//     }
+//   };
   
-  var request = gapi.client.calendar.events.insert({
-    'calendarId': 'primary',
-    'resource': event
-  });
+//   var request = gapi.client.calendar.events.insert({
+//     'calendarId': 'primary',
+//     'resource': event
+//   });
   
-  request.execute(function(event) {
-    appendPre('Event created: ' + event.htmlLink);
-  });
+//   request.execute(function(event) {
+//     appendPre('Event created: ' + event.htmlLink);
+//   });
 
 
-// https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
+// // https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
 
-// https://www.w3schools.com/js/js_json_parse.asp
+// // https://www.w3schools.com/js/js_json_parse.asp
