@@ -317,18 +317,23 @@ const myObj =
    
      const clubFacultyAdvisor = document.createElement('p');
      clubFacultyAdvisor.classList.add('faculty-advisor');
+     const facultyAdvisors = document.getElementsByClassName('faculty-advisor');
 
      const clubDay = document.createElement('p');
      clubDay.classList.add('club-day');
+     const clubDays = document.getElementsByClassName('club-day');
      
      const clubTime = document.createElement('p');
      clubTime.classList.add('club-time');
+     const clubTimes = document.getElementsByClassName('club-time');
 
     const clubRoom = document.createElement('p');
     clubRoom.classList.add('club-room');
+    const clubRooms = document.getElementsByClassName('club-room');
 
     const clubDescription = document.createElement('p');
-    clubDescription.classList.add('club-description'); 
+    clubDescription.classList.add('club-description');
+    const clubDescriptions = document.getElementsByClassName('club-description');
 
      
 
@@ -336,19 +341,19 @@ const myObj =
      clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
 
      clubList[i].appendChild(clubFacultyAdvisor);
-     clubNames[i].innerHTML = myObj.clubs[i]["Faculty Advisor"];
+     facultyAdvisors[i].innerHTML = myObj.clubs[i]["Faculty Advisor"];
 
      clubList[i].appendChild(clubDay);
-     clubNames[i].innerHTML = myObj.clubs[i]["Day"];
+     clubDays[i].innerHTML = myObj.clubs[i]["Day"];
 
      clubList[i].appendChild(clubTime);
-     clubNames[i].innerHTML = myObj.clubs[i]["Time"];
+     clubTimes[i].innerHTML = myObj.clubs[i]["Time"];
 
      clubList[i].appendChild(clubRoom);
-     clubNames[i].innerHTML = myObj.clubs[i]["Room"];
+     clubRooms[i].innerHTML = myObj.clubs[i]["Room"];
 
      clubList[i].appendChild(clubDescription);
-     clubNames[i].innerHTML = myObj.clubs[i]["Club Description"];
+     clubDescriptions[i].innerHTML = myObj.clubs[i]["Club Description"];
 
 
 
