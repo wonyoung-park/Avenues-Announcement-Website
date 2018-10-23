@@ -365,22 +365,19 @@ const myObj =
 
 const addClubButton = document.getElementById("add_club");
 const addClubForm = document.getElementById("form");
-const addNameArea = document.getElementsByClassName("club_add_area")[0];
+const addNameArea = document.getElementsByClassName("club_add_area")[0].value;
+const addFacultyAdvisor = document.getElementsByClassName("club_add_area")[1].value;
+const addDay = document.getElementsByClassName("club_add_area")[2].value;
+const addTime = document.getElementsByClassName("club_add_area")[3].value;
+const addRoom = document.getElementsByClassName("club_add_area")[4].value;
+const addClubDescription = document.getElementsByClassName("club_add_area")[5].value;
 addClubButton.addEventListener("click", showTab);
 const submitButton = document.getElementById("submit_button");
 submitButton.addEventListener("click", submitData);
 
 
-myObj.clubs.push(
-    {
-        'Club Name': "Omar",
-        'Faculty Advisor': "Denzell",
-        'Day': "N/A",
-        'Time': "N/a",
-        'Room': "Omar",
-        'Club Description': "God of Omar"
-    }
-);
+
+
 
 //Show the inputs
 function showTab(){
@@ -389,18 +386,27 @@ function showTab(){
 
 //submit the data into the 
 function submitData(){
-    myObj.clubs.push(
-        {
-            'Club Name': "Omar",
-            'Faculty Advisor': "Denzell",
-            'Day': "N/A",
-            'Time': "N/a",
-            'Room': "Omar",
-            'Club Description': "God of Omar"
-        }
-    );
+//     let newClub = {
+//         'Club Name': addNameArea.value,
+//         'Faculty Advisor': addFacultyAdvisor.value,
+//         'Day': addDay.value,
+//         'Time': addTime.value,
+//         'Room': addRoom.value,
+//         'Club Description': addClubDescription.value
+// }
+    myObj.clubs.push(newClub);
 }
-
+function club(funcClubName, funcFacultyAdvisor, funcDay, funcTime, funcRoom, funcClubDescription) {
+    this.clubName = funcClubName;  
+    this.clubFacultyAdvisor = funcFacultyAdvisor;   
+    this.clubDay = funcDay;   
+    this.clubTime = funcTime;   
+    this.clubRoom = funcRoom;   
+    this.clubDescriptiona = funcClubDescription;   
+ 
+}
+//This works???
+var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
 
 // Refer to the JavaScript quickstart on how to setup the environment:
 // https://developers.google.com/calendar/quickstart/js
