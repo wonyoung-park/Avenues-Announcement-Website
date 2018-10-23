@@ -363,6 +363,43 @@ const myObj =
 
 }
 
+const addClubButton = document.getElementById("add_club");
+const addClubForm = document.getElementById("form");
+const addNameArea = document.getElementsByClassName("club_add_area")[0];
+addClubButton.addEventListener("click", showTab);
+const submitButton = document.getElementById("submit_button");
+submitButton.addEventListener("click", submitData);
+
+
+myObj.clubs.push(
+    {
+        'Club Name': "Omar",
+        'Faculty Advisor': "Denzell",
+        'Day': "N/A",
+        'Time': "N/a",
+        'Room': "Omar",
+        'Club Description': "God of Omar"
+    }
+);
+
+//Show the inputs
+function showTab(){
+    addClubForm.style.display = "inline";
+}
+
+//submit the data into the 
+function submitData(){
+    myObj.clubs.push(
+        {
+            'Club Name': "Omar",
+            'Faculty Advisor': "Denzell",
+            'Day': "N/A",
+            'Time': "N/a",
+            'Room': "Omar",
+            'Club Description': "God of Omar"
+        }
+    );
+}
 
 
 // Refer to the JavaScript quickstart on how to setup the environment:
