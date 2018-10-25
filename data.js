@@ -364,8 +364,11 @@ const myObj =
     }
     
     //Show the inputs
-function showTab(some){
-    some.style.display = "inline";
+function showTab(form){
+     form.style.display = "inline";
+    // if (form.style.display == "inline"){
+    //     form.style.display = "none";
+    // }
 }
     //Add Club variables
     
@@ -373,30 +376,31 @@ const addClubForm = document.getElementById("form");
 const addClubButton = document.getElementById("add_club");
 addClubButton.addEventListener("click", () => {
     showTab(addClubForm);
-});
+}, false);
 const submitButton = document.getElementById("submit_button");
 submitButton.addEventListener("click", submitData);
 
 
 //Remove Club variables
 const removeClubButton = document.getElementById("remove_club");
+const removeClubForm = document.getElementById('remove_form');
 removeClubButton.addEventListener('click', () => {
-    showTab(removeClubInput);
-});
+    showTab(removeClubForm);
+}, false);
+const submitButtonDelete = document.getElementById("submit_button_delete");
+submitButtonDelete.addEventListener("click", deleteClub);
 
 var clubName = document.getElementsByClassName("club_add_area")[0].value;
+
+
 function deleteClub(){
+    var input = document.getElementById('remove').value;
     for (var i = 0; i < myObj.clubs.length; i++){
-        // if (clubName == ){
-            return i;
-        // }
-        return null;
+        //This deletes the club object as specified when an index number is typed in the Which club do you want to remove box?
+       return myObj.clubs.splice(i,1);
     }
-    myObj.clubs.splice(i,1);
+    removeClubForm.style.display = "none";
 
-
-    /*
-    */
 }
 
 
