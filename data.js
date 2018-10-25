@@ -360,21 +360,48 @@ const myObj =
 
 
 
-
+     
+    }
+    
+    //Show the inputs
+function showTab(some){
+    some.style.display = "inline";
 }
-
+    //Add Club variables
+    
 const addClubForm = document.getElementById("form");
 const addClubButton = document.getElementById("add_club");
-addClubButton.addEventListener("click", showTab);
+addClubButton.addEventListener("click", () => {
+    showTab(addClubForm);
+});
 const submitButton = document.getElementById("submit_button");
 submitButton.addEventListener("click", submitData);
 
-//Show the inputs
-function showTab(){
-    addClubForm.style.display = "inline";
+
+//Remove Club variables
+const removeClubButton = document.getElementById("remove_club");
+removeClubButton.addEventListener('click', () => {
+    showTab(removeClubInput);
+});
+
+var clubName = document.getElementsByClassName("club_add_area")[0].value;
+function deleteClub(){
+    for (var i = 0; i < myObj.clubs.length; i++){
+        // if (clubName == ){
+            return i;
+        // }
+        return null;
+    }
+    myObj.clubs.splice(i,1);
+
+
+    /*
+    */
 }
 
-//submit the data into the 
+
+
+//submit the data into the array
 function submitData(){
     var input = document.getElementsByClassName("club_add_area")[0].value;
     var input2 = document.getElementsByClassName("club_add_area")[1].value;
