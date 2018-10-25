@@ -22,10 +22,11 @@
    <!-- Adding club button -->
 
   <button id="add_club">Add Club</button>
+
   <form id="form" style ="display:none">
     <label>
       Club Name
-      <input class="club_add_area" value="ho" type="text">
+      <input class="club_add_area" type="text">
     </label>
     <label>
       Faculty Advisor
@@ -47,7 +48,8 @@
       Club Description
     <input class="club_add_area" type="text">
     </label>
-    <input id="submit_button" type="submit" onclick="submitData()">
+    <!-- its a button not a input type = submit button! -->
+    <button type="button" id="submit_button">Submit</button>
   </form>
 
 

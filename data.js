@@ -363,21 +363,11 @@ const myObj =
 
 }
 
-const addClubButton = document.getElementById("add_club");
 const addClubForm = document.getElementById("form");
-const addNameArea = document.getElementsByClassName("club_add_area")[0].value;
-const addFacultyAdvisor = document.getElementsByClassName("club_add_area")[1].value;
-const addDay = document.getElementsByClassName("club_add_area")[2].value;
-const addTime = document.getElementsByClassName("club_add_area")[3].value;
-const addRoom = document.getElementsByClassName("club_add_area")[4].value;
-const addClubDescription = document.getElementsByClassName("club_add_area")[5].value;
+const addClubButton = document.getElementById("add_club");
 addClubButton.addEventListener("click", showTab);
 const submitButton = document.getElementById("submit_button");
 submitButton.addEventListener("click", submitData);
-
-
-
-
 
 //Show the inputs
 function showTab(){
@@ -386,27 +376,27 @@ function showTab(){
 
 //submit the data into the 
 function submitData(){
-//     let newClub = {
-//         'Club Name': addNameArea.value,
-//         'Faculty Advisor': addFacultyAdvisor.value,
-//         'Day': addDay.value,
-//         'Time': addTime.value,
-//         'Room': addRoom.value,
-//         'Club Description': addClubDescription.value
-// }
+    var input = document.getElementsByClassName("club_add_area")[0].value;
+    var input2 = document.getElementsByClassName("club_add_area")[1].value;
+    var input3 = document.getElementsByClassName("club_add_area")[2].value;
+    var input4 = document.getElementsByClassName("club_add_area")[3].value;
+    var input5 = document.getElementsByClassName("club_add_area")[4].value;
+    var input6 = document.getElementsByClassName("club_add_area")[5].value;
+ 
+    addClubForm.style.display = "none";
+    let newClub = {
+        'Club Name': input,
+        'Faculty Advisor': input2,
+        'Day': input3,
+        'Time': input4,
+        'Room': input5,
+        'Club Description': input6
+};
     myObj.clubs.push(newClub);
 }
-function club(funcClubName, funcFacultyAdvisor, funcDay, funcTime, funcRoom, funcClubDescription) {
-    this.clubName = funcClubName;  
-    this.clubFacultyAdvisor = funcFacultyAdvisor;   
-    this.clubDay = funcDay;   
-    this.clubTime = funcTime;   
-    this.clubRoom = funcRoom;   
-    this.clubDescriptiona = funcClubDescription;   
- 
-}
+
 //This works???
-var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
+// var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
 
 // Refer to the JavaScript quickstart on how to setup the environment:
 // https://developers.google.com/calendar/quickstart/js
