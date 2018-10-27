@@ -393,11 +393,11 @@ submitButtonDelete.addEventListener("click", deleteClub);
 
 
 function deleteClub(){
-    var clubName = document.getElementById("remove").value;
+    var clubNameToDelete = document.getElementById("remove").value;
     for (var i = 0; i < myObj.clubs.length; i++){
-        //This deletes the club object as specified when an index number is typed in the Which club do you want to remove box?
+        //This deletes the club object as specified when the club name is typed in the Which club do you want to remove box?
        
-       if (clubName === myObj.clubs[i]["Club Name"])
+       if (clubNameToDelete === myObj.clubs[i]["Club Name"])
         return myObj.clubs.splice(i, 1);
     }
     removeClubForm.style.display = "none";
