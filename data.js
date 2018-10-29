@@ -304,6 +304,16 @@ const myObj =
     "congratulations":"Normally this would be in comments but it isn't, congrats for finding the passwords and yeah, I was one of the students working on this file, use the data as you want"
  };
 
+//sort
+ myObj.clubs.sort(function(a, b){
+    if(a["Club Name"] < b["Club Name"]) { return -1; }
+    if(a["Club Name"] > b["Club Name"]) { return 1; }
+    return 0;
+})
+
+
+
+
  for (let i = 0; i < myObj.clubs.length; i++) {
      const clubDivs = document.createElement('div');
      document.body.appendChild(clubDivs); //puts the div type element created into the body
