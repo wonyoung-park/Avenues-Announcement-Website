@@ -393,14 +393,19 @@ submitButtonDelete.addEventListener("click", deleteClub);
 
 
 function deleteClub(){
-    var clubNameToDelete = document.getElementById("remove").value;
+    let clubNameToDelete = document.getElementById("remove").value;
+    document.getElementById("remove").value = "";
     for (var i = 0; i < myObj.clubs.length; i++){
         //This deletes the club object as specified when the club name is typed in the Which club do you want to remove box?
-       
-       if (clubNameToDelete === myObj.clubs[i]["Club Name"])
-        return myObj.clubs.splice(i, 1);
+        
+        if (clubNameToDelete === myObj.clubs[i]["Club Name"]){
+            myObj.clubs.splice(i, 1);
+        }
+        
     }
-    removeClubForm.style.display = "none";
+    
+    //clubNameToDelete = " ";
+    return removeClubForm.style.display = "none";
 
 }
 
@@ -414,7 +419,19 @@ function submitData(){
     var input4 = document.getElementsByClassName("club_add_area")[3].value;
     var input5 = document.getElementsByClassName("club_add_area")[4].value;
     var input6 = document.getElementsByClassName("club_add_area")[5].value;
- 
+
+    for(let i = 0; i <= 5; i++){
+        document.getElementsByClassName("club_add_area")[i].value = ""
+    }
+    //same thing (above)
+    // document.getElementsByClassName("club_add_area")[0].value = "";
+    // document.getElementsByClassName("club_add_area")[1].value = "";
+    // document.getElementsByClassName("club_add_area")[2].value = "";
+    // document.getElementsByClassName("club_add_area")[3].value = "";
+    // document.getElementsByClassName("club_add_area")[4].value = "";
+    // document.getElementsByClassName("club_add_area")[5].value = "";
+
+
     addClubForm.style.display = "none";
     let newClub = {
         'Club Name': input,
