@@ -376,9 +376,7 @@ const myObj =
     //Show the inputs
 function showTab(form){
      form.style.display = "inline";
-    // if (form.style.display == "inline"){
-    //     form.style.display = "none";
-    // }
+ 
 }
     //Add Club variables
     
@@ -414,7 +412,6 @@ function deleteClub(){
         
     }
     
-    //clubNameToDelete = " ";
     return removeClubForm.style.display = "none";
 
 }
@@ -433,13 +430,7 @@ function submitData(){
     for(let i = 0; i <= 5; i++){
         document.getElementsByClassName("club_add_area")[i].value = ""
     }
-    //same thing (above)
-    // document.getElementsByClassName("club_add_area")[0].value = "";
-    // document.getElementsByClassName("club_add_area")[1].value = "";
-    // document.getElementsByClassName("club_add_area")[2].value = "";
-    // document.getElementsByClassName("club_add_area")[3].value = "";
-    // document.getElementsByClassName("club_add_area")[4].value = "";
-    // document.getElementsByClassName("club_add_area")[5].value = "";
+  
 
 
     addClubForm.style.display = "none";
@@ -461,44 +452,6 @@ function submitData(){
 // https://developers.google.com/calendar/quickstart/js
 // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
 // stored credentials.
-
-// var event = {
-//     'summary': 'Google I/O 2015',
-//     'location': '800 Howard St., San Francisco, CA 94103',
-//     'description': 'A chance to hear more about Google\'s developer products.',
-//     'start': {
-//       'dateTime': '2015-05-28T09:00:00-07:00',
-//       'timeZone': 'America/Los_Angeles'
-//     },
-//     'end': {
-//       'dateTime': '2015-05-28T17:00:00-07:00',
-//       'timeZone': 'America/Los_Angeles'
-//     },
-//     'recurrence': [
-//       'RRULE:FREQ=DAILY;COUNT=2'
-//     ],
-//     'attendees': [
-//       {'email': 'lpage@example.com'},
-//       {'email': 'sbrin@example.com'}
-//     ],
-//     'reminders': {
-//       'useDefault': false,
-//       'overrides': [
-//         {'method': 'email', 'minutes': 24 * 60},
-//         {'method': 'popup', 'minutes': 10}
-//       ]
-//     }
-//   };
-  
-//   var request = gapi.client.calendar.events.insert({
-//     'calendarId': 'primary',
-//     'resource': event
-//   });
-  
-//   request.execute(function(event) {
-//     appendPre('Event created: ' + event.htmlLink);
-//   });
-
 
 // // https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
 
