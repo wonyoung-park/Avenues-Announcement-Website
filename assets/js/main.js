@@ -11,7 +11,7 @@ clubsRef.set({
 });
 
 
-function updateDBAddNewClub(event){
+function updateDBAddNewClub(event, userId){
     event.preventDefault();
 
     const addClubName = $('#addClubName').val();
@@ -29,6 +29,9 @@ function updateDBAddNewClub(event){
         Room: addRoom,
         clubDescription: addClubDescription
     };
+    firebase.database().ref('Clubs/').set(
+        newClubToAddToDB
+    );
 
     console.log(newClubToAddToDB.clubName);
     //Update database here
