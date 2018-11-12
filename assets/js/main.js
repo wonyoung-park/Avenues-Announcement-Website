@@ -4,14 +4,10 @@ let database = firebase.database().ref();
  * Updates the database with the username and message.
  */
 
-let clubsRef = firebase.database().ref("clubs/");
-
-clubsRef.set({
-
-});
 
 
-function updateDBAddNewClub(event, userId){
+
+function updateDBAddNewClub(event){
     event.preventDefault();
 
     const addClubName = $('#addClubName').val();
@@ -29,20 +25,16 @@ function updateDBAddNewClub(event, userId){
         Room: addRoom,
         clubDescription: addClubDescription
     };
-    firebase.database().ref('Clubs/').set(
-        newClubToAddToDB
-    );
-
-    console.log(newClubToAddToDB.clubName);
-    //Update database here
-    database.push(newClubToAddToDB);
+    firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
 }
 
 function updateDBDeleteClub() {
     event.preventDefault();
-    
-    
+    const removeClub = $('#remove').val();
+    // if (removeClub === firebase.database().ref('Clubs/' + 'oi')) {
+        
+    // }
 }
 
-addClubButton.addEventListener("click", updateDBAddNewClub);
-removeClubButton.addEventListener("click", updateDBDeleteClub);
+submitButton.addEventListener("click", updateDBAddNewClub);
+// submitButtonDelete.addEventListener("click", updateDBDeleteClub);

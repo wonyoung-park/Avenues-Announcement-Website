@@ -386,7 +386,7 @@ addClubButton.addEventListener("click", () => {
     showTab(addClubForm);
 }, false);
 const submitButton = document.getElementById("submit_button");
-submitButton.addEventListener("click", submitData);
+// submitButton.addEventListener("click", submitData);
 
 
 //Remove Club variables
