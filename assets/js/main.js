@@ -25,15 +25,21 @@ function updateDBAddNewClub(event){
         Room: addRoom,
         clubDescription: addClubDescription
     };
-    firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
+    firebase.database().ref('Clubs/' + addClubName).push(newClubToAddToDB);
+    addClubForm.style.display = "none";
 }
 
 function updateDBDeleteClub() {
     event.preventDefault();
     const removeClub = $('#remove').val();
-    // if (removeClub === firebase.database().ref('Clubs/' + 'oi')) {
-        
-    // }
+    var listRef = ref.child("Clubs");
+    var query = listRef.orderByChild("clubName").equalTo(removeClub);
+    query.once("value", function(snapshot) {
+        snapshot.forEach(function(itemSnapshot) {
+            itemSnapshot.ref.remove();
+   }); 
+});
+    removeClubForm.style.display = "none";
 }
 
 submitButton.addEventListener("click", updateDBAddNewClub);

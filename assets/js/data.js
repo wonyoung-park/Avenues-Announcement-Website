@@ -386,7 +386,7 @@ addClubButton.addEventListener("click", () => {
     showTab(addClubForm);
 }, false);
 const submitButton = document.getElementById("submit_button");
-// submitButton.addEventListener("click", submitData);
+//submitButton.addEventListener("click", submitData);
 
 
 //Remove Club variables
@@ -396,54 +396,54 @@ removeClubButton.addEventListener('click', () => {
     showTab(removeClubForm);
 }, false);
 const submitButtonDelete = document.getElementById("submit_button_delete");
-submitButtonDelete.addEventListener("click", deleteClub);
+//submitButtonDelete.addEventListener("click", deleteClub);
 
 
 
-function deleteClub(){
-    let clubNameToDelete = document.getElementById("remove").value;
-    document.getElementById("remove").value = "";
-    for (var i = 0; i < myObj.clubs.length; i++){
-        //This deletes the club object as specified when the club name is typed in the Which club do you want to remove box?
+// function deleteClub(){
+//     let clubNameToDelete = document.getElementById("remove").value;
+//     document.getElementById("remove").value = "";
+//     for (var i = 0; i < myObj.clubs.length; i++){
+//         //This deletes the club object as specified when the club name is typed in the Which club do you want to remove box?
         
-        if (clubNameToDelete === myObj.clubs[i]["Club Name"]){
-            myObj.clubs.splice(i, 1);
-        }
+//         if (clubNameToDelete === myObj.clubs[i]["Club Name"]){
+//             myObj.clubs.splice(i, 1);
+//         }
         
-    }
+//     }
     
-    return removeClubForm.style.display = "none";
+//     return removeClubForm.style.display = "none";
 
-}
+// }
 
 
 
-//submit the data into the array
-function submitData(){
-    var input = document.getElementsByClassName("club_add_area")[0].value;
-    var input2 = document.getElementsByClassName("club_add_area")[1].value;
-    var input3 = document.getElementsByClassName("club_add_area")[2].value;
-    var input4 = document.getElementsByClassName("club_add_area")[3].value;
-    var input5 = document.getElementsByClassName("club_add_area")[4].value;
-    var input6 = document.getElementsByClassName("club_add_area")[5].value;
+// //submit the data into the array
+// function submitData(){
+//     var input = document.getElementsByClassName("club_add_area")[0].value;
+//     var input2 = document.getElementsByClassName("club_add_area")[1].value;
+//     var input3 = document.getElementsByClassName("club_add_area")[2].value;
+//     var input4 = document.getElementsByClassName("club_add_area")[3].value;
+//     var input5 = document.getElementsByClassName("club_add_area")[4].value;
+//     var input6 = document.getElementsByClassName("club_add_area")[5].value;
 
-    for(let i = 0; i <= 5; i++){
-        document.getElementsByClassName("club_add_area")[i].value = ""
-    }
+//     for(let i = 0; i <= 5; i++){
+//         document.getElementsByClassName("club_add_area")[i].value = ""
+//     }
   
 
 
-    addClubForm.style.display = "none";
-    let newClub = {
-        'Club Name': input,
-        'Faculty Advisor': input2,
-        'Day': input3,
-        'Time': input4,
-        'Room': input5,
-        'Club Description': input6
-};
-    myObj.clubs.push(newClub);
-}
+//     addClubForm.style.display = "none";
+//     let newClub = {
+//         'Club Name': input,
+//         'Faculty Advisor': input2,
+//         'Day': input3,
+//         'Time': input4,
+//         'Room': input5,
+//         'Club Description': input6
+// };
+//     myObj.clubs.push(newClub);
+// }
 
 //This works???
 // var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
