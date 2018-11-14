@@ -1,8 +1,9 @@
 // Get a reference to the database service
 let database = firebase.database().ref();
-/**
- * Updates the database with the username and message.
- */
+//var ref = new Firebase("https://avenues-announcement.firebaseio.com");
+
+//  * Updates the database with the username and message.
+//  */
 
 
 
@@ -25,22 +26,23 @@ function updateDBAddNewClub(event){
         Room: addRoom,
         clubDescription: addClubDescription
     };
-    firebase.database().ref('Clubs/' + addClubName).push(newClubToAddToDB);
+    firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
     addClubForm.style.display = "none";
 }
 
 function updateDBDeleteClub() {
     event.preventDefault();
     const removeClub = $('#remove').val();
-    var listRef = ref.child("Clubs");
+    removeClubForm.style.display = "none";
+    var listRef = database.child("Clubs");
     var query = listRef.orderByChild("clubName").equalTo(removeClub);
-    query.once("value", function(snapshot) {
-        snapshot.forEach(function(itemSnapshot) {
-            itemSnapshot.ref.remove();
+        query.once("value", function(snapshot) {
+            snapshot.forEach(function(itemSnapshot) {
+                listRef.child(removeClub).remove()
    }); 
 });
-    removeClubForm.style.display = "none";
+    //database.child('Clubs').child('asdf').remove();
 }
 
 submitButton.addEventListener("click", updateDBAddNewClub);
-// submitButtonDelete.addEventListener("click", updateDBDeleteClub);
+submitButtonDelete.addEventListener("click", updateDBDeleteClub);
