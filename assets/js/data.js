@@ -314,89 +314,89 @@ const myObj =
 
 
 
- for (let i = 0; i < myObj.clubs.length; i++) {
-     const clubDivs = document.createElement('div');
-     document.body.appendChild(clubDivs); //puts the div type element created into the body
-     clubList = document.getElementsByClassName('Clubs');
-     clubDivs.classList.add('Clubs');
+//  for (let i = 0; i < myObj.clubs.length; i++) {
+//      const clubDivs = document.createElement('div');
+//      document.body.appendChild(clubDivs); //puts the div type element created into the body
+//      clubList = document.getElementsByClassName('Clubs');
+//      clubDivs.classList.add('Clubs');
     
-     const clubNameParagraph = document.createElement('p'); //creates a paragraph type in the html file from the JS file
-     clubNameParagraph.classList.add('club-name');
-     clubNames = document.getElementsByClassName('club-name');
+//      const clubNameParagraph = document.createElement('p'); //creates a paragraph type in the html file from the JS file
+//      clubNameParagraph.classList.add('club-name');
+//      clubNames = document.getElementsByClassName('club-name');
 
    
-     const clubFacultyAdvisor = document.createElement('p');
-     clubFacultyAdvisor.classList.add('faculty-advisor');
-     const facultyAdvisors = document.getElementsByClassName('faculty-advisor');
+//      const clubFacultyAdvisor = document.createElement('p');
+//      clubFacultyAdvisor.classList.add('faculty-advisor');
+//      const facultyAdvisors = document.getElementsByClassName('faculty-advisor');
 
-     const clubDay = document.createElement('p');
-     clubDay.classList.add('club-day');
-     const clubDays = document.getElementsByClassName('club-day');
+//      const clubDay = document.createElement('p');
+//      clubDay.classList.add('club-day');
+//      const clubDays = document.getElementsByClassName('club-day');
      
-     const clubTime = document.createElement('p');
-     clubTime.classList.add('club-time');
-     const clubTimes = document.getElementsByClassName('club-time');
+//      const clubTime = document.createElement('p');
+//      clubTime.classList.add('club-time');
+//      const clubTimes = document.getElementsByClassName('club-time');
 
-    const clubRoom = document.createElement('p');
-    clubRoom.classList.add('club-room');
-    const clubRooms = document.getElementsByClassName('club-room');
+//     const clubRoom = document.createElement('p');
+//     clubRoom.classList.add('club-room');
+//     const clubRooms = document.getElementsByClassName('club-room');
 
-    const clubDescription = document.createElement('p');
-    clubDescription.classList.add('club-description');
-    const clubDescriptions = document.getElementsByClassName('club-description');
-
-     
-
-     clubList[i].appendChild(clubNameParagraph);
-     clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
-
-     clubList[i].appendChild(clubFacultyAdvisor);
-     facultyAdvisors[i].innerHTML = myObj.clubs[i]["Faculty Advisor"];
-
-     clubList[i].appendChild(clubDay);
-     clubDays[i].innerHTML = myObj.clubs[i]["Day"];
-
-     clubList[i].appendChild(clubTime);
-     clubTimes[i].innerHTML = myObj.clubs[i]["Time"];
-
-     clubList[i].appendChild(clubRoom);
-     clubRooms[i].innerHTML = myObj.clubs[i]["Room"];
-
-     clubList[i].appendChild(clubDescription);
-     clubDescriptions[i].innerHTML = myObj.clubs[i]["Club Description"];
-
-
-
-
-
+//     const clubDescription = document.createElement('p');
+//     clubDescription.classList.add('club-description');
+//     const clubDescriptions = document.getElementsByClassName('club-description');
 
      
-    }
 
-    //Show the inputs
-function showTab(form){
-     form.style.display = "inline";
+//      clubList[i].appendChild(clubNameParagraph);
+//      clubNames[i].innerHTML = myObj.clubs[i]["Club Name"];
+
+//      clubList[i].appendChild(clubFacultyAdvisor);
+//      facultyAdvisors[i].innerHTML = myObj.clubs[i]["Faculty Advisor"];
+
+//      clubList[i].appendChild(clubDay);
+//      clubDays[i].innerHTML = myObj.clubs[i]["Day"];
+
+//      clubList[i].appendChild(clubTime);
+//      clubTimes[i].innerHTML = myObj.clubs[i]["Time"];
+
+//      clubList[i].appendChild(clubRoom);
+//      clubRooms[i].innerHTML = myObj.clubs[i]["Room"];
+
+//      clubList[i].appendChild(clubDescription);
+//      clubDescriptions[i].innerHTML = myObj.clubs[i]["Club Description"];
+
+
+
+
+
+
+     
+//     }
+
+//     //Show the inputs
+// function showTab(form){
+//      form.style.display = "inline";
  
-}
-    //Add Club variables
+// }
+//     //Add Club variables
     
-const addClubForm = document.getElementById("form");
-const addClubButton = document.getElementById("add_club");
-addClubButton.addEventListener("click", () => {
-    showTab(addClubForm);
-}, false);
-const submitButton = document.getElementById("submit_button");
-//submitButton.addEventListener("click", submitData);
+// const addClubForm = document.getElementById("form");
+// const addClubButton = document.getElementById("add_club");
+// addClubButton.addEventListener("click", () => {
+//     showTab(addClubForm);
+// }, false);
+// const submitButton = document.getElementById("submit_button");
+// //submitButton.addEventListener("click", submitData);
 
 
-//Remove Club variables
-const removeClubButton = document.getElementById("remove_club");
-const removeClubForm = document.getElementById('remove_form');
-removeClubButton.addEventListener('click', () => {
-    showTab(removeClubForm);
-}, false);
-const submitButtonDelete = document.getElementById("submit_button_delete");
-//submitButtonDelete.addEventListener("click", deleteClub);
+// //Remove Club variables
+// const removeClubButton = document.getElementById("remove_club");
+// const removeClubForm = document.getElementById('remove_form');
+// removeClubButton.addEventListener('click', () => {
+//     showTab(removeClubForm);
+// }, false);
+// const submitButtonDelete = document.getElementById("submit_button_delete");
+// //submitButtonDelete.addEventListener("click", deleteClub);
 
 
 
