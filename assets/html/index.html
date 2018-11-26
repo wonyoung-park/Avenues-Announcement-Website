@@ -24,6 +24,7 @@
     <script src="../js/lib/jquery-3.3.1.js"></script>
     <script src="../js/data.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/googlecalendar.js" defer></script>
   </head>
 
   <body>
@@ -97,8 +98,7 @@
             </nav>
         </div>
     <div id="calendar-container">
-        <iframe src="https://calendar.google.com/calendar/embed?src=ik8oresam8sbujk2ne09acblhl0riuhj%40import.calendar.google.com&ctz=America%2FNew_York " style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
-        n</iframe>
+      <iframe src="https://calendar.google.com/calendar/embed?src=clubannouncements-ny%40avenues.org&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <script type="text/javascript">
@@ -196,7 +196,7 @@
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 10,
+          'maxResults': 1,
           'orderBy': 'startTime'
         }).then(function(response) {
           var events = response.result.items;

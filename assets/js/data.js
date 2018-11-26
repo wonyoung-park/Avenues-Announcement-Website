@@ -299,7 +299,7 @@ const myObj =
        }
     ],
     "dataTitle":"Club Data",
-    "emailID":"annoucements-ny@avenues.org",
+    "emailID":"clubsannoucements-ny@avenues.org",
     "emailPassword":"what password",
     "congratulations":"Normally this would be in comments but it isn't, congrats for finding the passwords and yeah, I was one of the students working on this file, use the data as you want"
  };
