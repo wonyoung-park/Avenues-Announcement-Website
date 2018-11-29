@@ -1,28 +1,94 @@
-body, html {
+html, body {
     font-size: 100%;
     font-family: Helvetica, sans-serif, Arial;
-}
-
-body {
-    background: #f8f8f8;
     margin: 0;
-}
-nav, h1, nav ul {
-    margin: 0;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-li {
-    list-style: none;
     padding: 0;
 }
 
-li a {
-    text-decoration: none;
+nav ul {
+    background: #999999;
+    padding: 0;
+    list-style: none;
 }
 
 
+
+nav ul li a {
+    display: block;
+    color: #444;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    line-height: 1;
+}
+
+nav ul li {
+    border-bottom: 1px dotted #ddd;
+    
+}
+
+nav div:first-child {
+    /* background: #222; */
+    
+}
+
+nav {
+    
+}
+
+nav div:first-child h1 {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    line-height: 0;
+}
+
+nav div:first-child h1, nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 30em) {
+    nav {
+        display: flex;
+        justify-content: left;
+        background: #999999; 
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        background: none;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        border-bottom: none;
+ 
+    }
+    nav ul li a {
+        padding: 1.2rem 1rem;
+
+    }
+
+    nav div:first-child h1 {
+        padding: 0;
+        margin-left: 0 1rem;
+    }
+
+    nav div:first-child img {
+        height: 40px;
+    }
+
+    nav ul li:last-child {
+        display: flex;
+        width: 200px;
+    }
+
+    nav ul li:last-child {
+        justify-content: flex-end;
+    }
+
+    nav ul li a:hover {
+        background: red;
+    }
+}
 
