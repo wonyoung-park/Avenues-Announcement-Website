@@ -418,41 +418,41 @@ function deleteClub(){
 
 
 
-//submit the data into the array
-function submitData(){
-    var input = document.getElementsByClassName("club_add_area")[0].value;
-    var input2 = document.getElementsByClassName("club_add_area")[1].value;
-    var input3 = document.getElementsByClassName("club_add_area")[2].value;
-    var input4 = document.getElementsByClassName("club_add_area")[3].value;
-    var input5 = document.getElementsByClassName("club_add_area")[4].value;
-    var input6 = document.getElementsByClassName("club_add_area")[5].value;
+// //submit the data into the array
+// function submitData(){
+//     var input = document.getElementsByClassName("club_add_area")[0].value;
+//     var input2 = document.getElementsByClassName("club_add_area")[1].value;
+//     var input3 = document.getElementsByClassName("club_add_area")[2].value;
+//     var input4 = document.getElementsByClassName("club_add_area")[3].value;
+//     var input5 = document.getElementsByClassName("club_add_area")[4].value;
+//     var input6 = document.getElementsByClassName("club_add_area")[5].value;
 
-    for(let i = 0; i <= 5; i++){
-        document.getElementsByClassName("club_add_area")[i].value = ""
-    }
+//     for(let i = 0; i <= 5; i++){
+//         document.getElementsByClassName("club_add_area")[i].value = ""
+//     }
   
 
 
-    addClubForm.style.display = "none";
-    let newClub = {
-        'Club Name': input,
-        'Faculty Advisor': input2,
-        'Day': input3,
-        'Time': input4,
-        'Room': input5,
-        'Club Description': input6
-};
-    myObj.clubs.push(newClub);
-}
+//     addClubForm.style.display = "none";
+//     let newClub = {
+//         'Club Name': input,
+//         'Faculty Advisor': input2,
+//         'Day': input3,
+//         'Time': input4,
+//         'Room': input5,
+//         'Club Description': input6
+// };
+//     myObj.clubs.push(newClub);
+// }
 
-This works???
-var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
+// This works???
+// var avenuesEngineeringClub = new club(addNameArea, addFacultyAdvisor, addDay, addTime, addRoom, addClubDescription);
 
-Refer to the JavaScript quickstart on how to setup the environment:
-https://developers.google.com/calendar/quickstart/js
-Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
-stored credentials.
+// Refer to the JavaScript quickstart on how to setup the environment:
+// https://developers.google.com/calendar/quickstart/js
+// Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
+// stored credentials.
 
-// https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
+// // https://stackoverflow.com/questions/8081701/i-keep-getting-uncaught-syntaxerror-unexpected-token-o
 
-// https://www.w3schools.com/js/js_json_parse.asp
+// // https://www.w3schools.com/js/js_json_parse.asp

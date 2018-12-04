@@ -1,13 +1,77 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="../js/lib/jquery-3.3.1.js"></script>
-    <script src="../js/data.js" defer></script>
-    <script src="../js/main.js" defer></script>
-    <script src="../js/googlecalendar.js" defer></script>
-  </head>
-      
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Avenues Announcement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="../../js/lib/jquery-3.3.1.js" defer></script>
+    <script src="../../js/data.js" defer></script>
+    <script src="../../js/main.js" defer></script>
+    <script src="../../js/googlecalendar.js" defer></script>
+</div>
+<form style="display: none;" id="remove_form">
+  <label>
+    Which club do you want to delete?
+    <input type="text" id="remove" required>
+  </label>
+  <button type="button" id="submit_button_delete">Submit</button>
+</form>
+
+<form id="form" style ="display:none">
+  <label>
+    Club Name
+    <input id="addClubName" class="club_add_area" type="text" required>
+  </label>
+  <label>
+    Faculty Advisor
+    <input id="addFacultyAdvisor" class="club_add_area" type="text" required>
+  </label>
+  <label>
+    Day
+    <input id="addDay" class="club_add_area" type="text" required>
+  </label>
+  <label>
+    Time
+    <input id="addTime" class="club_add_area" type="text" required>
+  </label>
+  <label>
+    Room
+    <input id="addRoom" class="club_add_area" type="text" required>
+  </label>
+  <label>
+    Club Description
+  <input id="addClubDescription" class="club_add_area" type="text" required>
+  </label>
+  <!-- its a button not a input type = submit button! -->
+  <button type="button" id="submit_button">Submit</button>
+</form>
+   <!-- Divider for code (div) -->
+          <nav>
+            <div>
+              <h1><a href="../html/index.html">
+                <!-- <img src="../img/Avenues_Logo.png" alt="Avenues Logo" id="avenues-logo"> -->
+                <svg viewBox="-30 -20 100 100" width="100" height="100">
+                    <!-- WE ARE HACKERS -->
+                    <path id="avenues-logo" fill="#6188A1" d="M27.506 18.985L8.943 59.92H.645L27.505 0l26.862 59.92h-8.3z" ></path>
+                </svg>
+              </h1></a>
+            </div>
+
+              <ul id="navbar-container">
+                  <li><a href="../../not_logged_in/html/about.html">About</a></li>
+                  <li><a href="../../not_logged_in/html/clubs.html">Clubs</a></li>
+                    <li><a href="../../logged_in/html/index_logged_in.html">Admin Login</a></li>
+                    <li><input type="search" id="search-bar" placeholder="Search" size="20"></li>
+                      <!-- <i class="fas fa-search"></i> -->
+              </ul>
+          </nav>
+
 <script src="../js/data.js" defer></script>
 <script src="../js/main.js" defer></script>
 
