@@ -1,7 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-  
     <!DOCTYPE html>
     <html>
       <head>
@@ -30,58 +26,56 @@
         <script src="../../js/main.js" defer></script>
         <script src="../../js/googlecalendar.js" defer></script>
       </head>
-</div>
+  <body>
+     <!-- Divider for code (div) -->
+     <nav>
+      <div>
+        <h1><a href="../html/index.html">
+          <!-- <img src="../img/Avenues_Logo.png" alt="Avenues Logo" id="avenues-logo"> -->
+          <svg viewBox="-30 -20 100 100" width="100" height="100">
+              <!-- WE ARE HACKERS -->
+              <path id="avenues-logo" fill="#6188A1" d="M27.506 18.985L8.943 59.92H.645L27.505 0l26.862 59.92h-8.3z" ></path>
+          </svg>
+        </h1></a>
+      </div>
 
-   <!-- Divider for code (div) -->
-          <nav>
-            <div>
-              <h1><a href="../html/index.html">
-                <!-- <img src="../img/Avenues_Logo.png" alt="Avenues Logo" id="avenues-logo"> -->
-                <svg viewBox="-30 -20 100 100" width="100" height="100">
-                    <!-- WE ARE HACKERS -->
-                    <path id="avenues-logo" fill="#6188A1" d="M27.506 18.985L8.943 59.92H.645L27.505 0l26.862 59.92h-8.3z" ></path>
-                </svg>
-              </h1></a>
-            </div>
+        <ul id="navbar-container">
+            <li><a href="../../not_logged_in/html/about.html">About</a></li>
+            <li><a href="../../not_logged_in/html/clubs.html">Clubs</a></li>
+              <li><a href="../../logged_in/html/index_logged_in.html">Admin Login</a></li>
+              <li><input type="search" id="search-bar" placeholder="Search" size="20"></li>
+                <!-- <i class="fas fa-search"></i> -->
+        </ul>
+    </nav>
+      
+      <form class="form">
+        <label>
+          Club Name
+          <input class="addClubName" class="club_add_area" type="text" required>
+        </label>
+        <label>
+          Faculty Advisor
+          <input class="addFacultyAdvisor" class="club_add_area" type="text" required>
+        </label>
+        <label>
+          Day
+          <input class="addDay" class="club_add_area" type="text" required>
+        </label>
+        <label>
+          Time
+          <input class="addTime" class="club_add_area" type="text" required>
+        </label>
+        <label>
+          Room
+          <input class="addRoom" class="club_add_area" type="text" required>
+        </label>
+        <label>
+          Club Description
+        <input class="addClubDescription" class="club_add_area" type="text" required>
+        </label>
+        <!-- its a button not a input type = submit button! -->
+        <button type="button" class="submit_button">Submit</button>
+      </form>
 
-              <ul id="navbar-container">
-                  <li><a href="../../not_logged_in/html/about.html">About</a></li>
-                  <li><a href="../../not_logged_in/html/clubs.html">Clubs</a></li>
-                    <li><a href="../../logged_in/html/index_logged_in.html">Admin Login</a></li>
-                    <li><input type="search" id="search-bar" placeholder="Search" size="20"></li>
-                      <!-- <i class="fas fa-search"></i> -->
-              </ul>
-          </nav>
-            
-            <form class="form">
-              <label>
-                Club Name
-                <input class="addClubName" class="club_add_area" type="text" required>
-              </label>
-              <label>
-                Faculty Advisor
-                <input class="addFacultyAdvisor" class="club_add_area" type="text" required>
-              </label>
-              <label>
-                Day
-                <input class="addDay" class="club_add_area" type="text" required>
-              </label>
-              <label>
-                Time
-                <input class="addTime" class="club_add_area" type="text" required>
-              </label>
-              <label>
-                Room
-                <input class="addRoom" class="club_add_area" type="text" required>
-              </label>
-              <label>
-                Club Description
-              <input class="addClubDescription" class="club_add_area" type="text" required>
-              </label>
-              <!-- its a button not a input type = submit button! -->
-              <button type="button" class="submit_button">Submit</button>
-            </form>
-
-
-
+  </body>
 </html>
