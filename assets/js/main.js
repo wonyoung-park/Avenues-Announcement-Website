@@ -41,6 +41,7 @@ function updateDBDeleteClub() {
                 listRef.child(removeClub).remove()
    }); 
 });
+    firebase.database().ref('Clubs/').orderByChild("clubName");
     //database.child('Clubs').child('asdf').remove();
 }
 
