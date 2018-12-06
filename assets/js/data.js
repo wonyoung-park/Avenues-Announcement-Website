@@ -385,8 +385,7 @@ const addClubButton = document.getElementById("add_club");
 addClubButton.addEventListener("click", () => {
     showTab(addClubForm);
 }, false);
-const submitButton = document.getElementById("submit_button");
-//submitButton.addEventListener("click", submitData);
+const submittButton = document.getElementsByClassName("submit_button");
 
 
 //Remove Club variables
@@ -396,7 +395,6 @@ removeClubButton.addEventListener('click', () => {
     showTab(removeClubForm);
 }, false);
 const submitButtonDelete = document.getElementById("submit_button_delete");
-//submitButtonDelete.addEventListener("click", deleteClub);
 
 
 
@@ -433,7 +431,7 @@ function deleteClub(){
   
 
 
-//     addClubForm.style.display = "none";
+    // addClubForm.style.display = "none";
 //     let newClub = {
 //         'Club Name': input,
 //         'Faculty Advisor': input2,

@@ -11,12 +11,12 @@ let database = firebase.database().ref();
 function updateDBAddNewClub(event){
     event.preventDefault();
 
-    const addClubName = $('#addClubName').val();
-    const addFacultyAdvisor = $('#addFacultyAdvisor').val();
-    const addDay = $('#addDay').val();
-    const addTime = $('#addTime').val();
-    const addRoom = $('#addRoom').val();
-    const addClubDescription = $('#addClubDescription').val();
+    const addClubName = $('.addClubName').val();
+    const addFacultyAdvisor = $('.addFacultyAdvisor').val();
+    const addDay = $('.addDay').val();
+    const addTime = $('.addTime').val();
+    const addRoom = $('.addRoom').val();
+    const addClubDescription = $('.addClubDescription').val();
 
     const newClubToAddToDB = {
         clubName: addClubName,
@@ -45,5 +45,7 @@ function updateDBDeleteClub() {
     //database.child('Clubs').child('asdf').remove();
 }
 
-submitButton.addEventListener("click", updateDBAddNewClub);
+for (let i = 0; i < submitButton.length; i++) {
+    submitButton[i].addEventListener("click", updateDBAddNewClub);
+}
 submitButtonDelete.addEventListener("click", updateDBDeleteClub);
