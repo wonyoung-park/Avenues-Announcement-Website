@@ -29,7 +29,7 @@ function updateDBAddNewClub(event){
     firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
     let addClubForm = $(".form");
     
-    
+    addClubForm.css("display", "none");
         
 }
 
@@ -52,11 +52,9 @@ let submitButton = document.getElementsByClassName("submit_button");
 let submitButtonDelete = document.getElementsByClassName("submit_button_delete");
 
 for (let i = 0; i < submitButton.length; i++) {
-    submitButton[i].addEventListener("click", updateDBAddNewClub);
-    
+    submitButton[i].addEventListener("click", updateDBAddNewClub); 
 }
 
 for (let i = 0; i < submitButtonDelete.length; i++) {
     submitButtonDelete[i].addEventListener("click", updateDBDeleteClub);
-    console.log("HIIIII");
 }

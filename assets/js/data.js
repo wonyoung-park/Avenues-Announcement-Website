@@ -389,11 +389,11 @@ function showTab(form){
 
 
 //Remove Club variables
-const removeClubButton = document.getElementById("remove_club");
-const removeClubForm = document.getElementById('remove_form');
-removeClubButton.addEventListener('click', () => {
-    showTab(removeClubForm);
-}, false);
+// const removeClubButton = document.getElementById("remove_club");
+// const removeClubForm = document.getElementById('remove_form');
+// removeClubButton.addEventListener('click', () => {
+//     showTab(removeClubForm);
+// }, false);
 
 
 
