@@ -27,13 +27,16 @@ function updateDBAddNewClub(event){
         clubDescription: addClubDescription
     };
     firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
-    addClubForm.style.display = "none";
+    let addClubForm = $(".form");
+    
+    
+        
 }
 
 function updateDBDeleteClub() {
     event.preventDefault();
-    const removeClub = $('#remove').val();
-    removeClubForm.style.display = "none";
+
+    $(".form").css("display","none");
     var listRef = database.child("Clubs");
     var query = listRef.orderByChild("clubName").equalTo(removeClub);
         query.once("value", function(snapshot) {
@@ -42,10 +45,18 @@ function updateDBDeleteClub() {
    }); 
 });
     firebase.database().ref('Clubs/').orderByChild("clubName");
-    //database.child('Clubs').child('asdf').remove();
+    // database.child('Clubs').child('asdf').remove();
 }
+
+let submitButton = document.getElementsByClassName("submit_button");
+let submitButtonDelete = document.getElementsByClassName("submit_button_delete");
 
 for (let i = 0; i < submitButton.length; i++) {
     submitButton[i].addEventListener("click", updateDBAddNewClub);
+    
 }
-submitButtonDelete.addEventListener("click", updateDBDeleteClub);
+
+for (let i = 0; i < submitButtonDelete.length; i++) {
+    submitButtonDelete[i].addEventListener("click", updateDBDeleteClub);
+    console.log("HIIIII");
+}

@@ -380,12 +380,12 @@ function showTab(form){
 }
     //Add Club variables
     
-const addClubForm = document.getElementById("form");
-const addClubButton = document.getElementById("add_club");
-addClubButton.addEventListener("click", () => {
-    showTab(addClubForm);
-}, false);
-const submittButton = document.getElementsByClassName("submit_button");
+// const addClubForm = document.getElementById("form");
+// const addClubButton = document.getElementById("add_club");
+// addClubButton.addEventListener("click", () => {
+//     showTab(addClubForm);
+// }, false);
+// let submittButton = document.getElementById("submit_button");
 
 
 //Remove Club variables
@@ -394,7 +394,6 @@ const removeClubForm = document.getElementById('remove_form');
 removeClubButton.addEventListener('click', () => {
     showTab(removeClubForm);
 }, false);
-const submitButtonDelete = document.getElementById("submit_button_delete");
 
 
 
