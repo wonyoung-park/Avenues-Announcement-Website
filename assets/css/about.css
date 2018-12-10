@@ -24,10 +24,27 @@ h3 {
     justify-content: center;
 }
 
+/* .about-the-creators-main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+} */
+
 .about-the-creators-main-container {
     display: flex;
     height: 100%;
     align-items: center;
     justify-content: space-around;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    
+    .about-the-creators-main-container {
+        flex-direction: column;
+    }
+}
+
 
