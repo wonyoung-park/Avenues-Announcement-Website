@@ -12,9 +12,8 @@ html, body {
 }
 
 .question-and-answer-flex-container {
-
+    display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
 }
