@@ -1,6 +1,11 @@
 html, body {
     height: 100%;
 }
+
+h3 {
+    text-align: center;
+}
+
 .about-page-primary-header {
     text-align: center;
 }
@@ -17,3 +22,11 @@ html, body {
     align-items: center;
     justify-content: center;
 }
+
+.about-the-creators-main-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
