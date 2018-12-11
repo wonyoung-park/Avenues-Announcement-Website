@@ -15,22 +15,22 @@ const myObj =
           "Day":"Wednesdays",
           "Time":"3:45-4:45",
           "Room":"1003",
-          "Club Description":"The Food and Hunger Advocacy club is in its fourth year at Avenues and continues to bring awareness to hunger and volunteering in our local community. Throughout the year, we volunteer at St. Clements, with plans to volunteer at the Leftover Restaurant Cuisine. We also  participate in food drives and organize the Thanksgiving Food Drive at Avenues and serve those at St. Clements during Thanksgiving week. During the second half of the year we continue our volunteer work and design an interactive activity in which the whole Upper Division participates to bring food awareness to our community.  "
+          "Club Description":"The Food and Hunger Advocacy club is in its fourth year at Avenues and continues to bring awareness to hunger and volunteering in our local community. Throughout the year, we volunteer at St. Clements, with plans to volunteer at the Leftover Restaurant Cuisine. We also  participate in food drives and organize the Thanksgiving Food Drive at Avenues and serve those at St. Clements during Thanksgiving week. During the second half of the year we continue our volunteer work and design an interactive activity in which the whole Upper Division participates to bring food awareness to our community."
        },
        {
           "Club Name":"Penumbra",
           "Faculty Advisor":"Adam Jernigan & Kate Howard",
           "Day":"Wednesday",
           "Time":"3:45-4:45",
-          "Room":"Reserach and Writing Center",
-          "Club Description":"Penumbra is the school literary and art magazine. The club aims to ensure students feel that they are visionaries and creators of arts and culture at Avenues. They will collaborate on the envisioning, editing, selecting, organizing and publishing process for the school artistic and literary journal.  "
+          "Room":"Research and Writing Center",
+          "Club Description":"Penumbra is the school literary and art magazine. The club aims to ensure students feel that they are visionaries and creators of arts and culture at Avenues. They will collaborate on the envisioning, editing, selecting, organizing and publishing process for the school artistic and literary journal."
        },
        {
           "Club Name":"Highliner",
           "Faculty Advisor":"Daniel Mendel",
           "Day":"Tuesday & Thursday",
           "Time":"3:05-5:00",
-          "Room":"Reserach and Writing Center",
+          "Room":"Research and Writing Center",
           "Club Description":"The upper school's journalism club features a robust staff of student writers, editors, and artists producing our Avenues school news publication, The Highliner. The Highliner will operate a website with frequent news updates, a social media feed on Instagram, and publish a seasonal magazine featuring campus news, as well as student-produced editorials, artwork and literature. Staff writers will meet with editors weekly to discuss the progress of their articles. Additionally, the club will host several roundtable discussions designed to address current trends in the field of journalism."
        },
        {
