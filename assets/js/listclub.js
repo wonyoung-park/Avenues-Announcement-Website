@@ -17,6 +17,13 @@ let database = firebase.database().ref();
 function showClub(){
     let phi = firebase.database().ref('Clubs/');
     console.log(phi);
+    var leadsRef = firebase.database().ref('Clubs/');
+    leadsRef.on('value', function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+        });
+    });
+
 }
 
 showClub();
