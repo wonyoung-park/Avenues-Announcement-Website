@@ -1,10 +1,8 @@
 # Source: http://wescpy.blogspot.com/2015/09/creating-events-in-google-calendar.html
-#!/usr/bin/env python
 from __future__ import print_function
 from apiclient import discovery
 from httplib2 import Http
 from oauth2client import file, client, tools
-
 
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 store = file.Storage('storage.json')
@@ -32,5 +30,4 @@ print('''*** %r event added:
     Start: %s
     End:   %s''' % (e['summary'].encode('utf-8'),
         e['start']['dateTime'], e['end']['dateTime']))
-
 
