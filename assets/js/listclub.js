@@ -14,5 +14,9 @@ let database = firebase.database().ref();
 //     //database.child('Clubs').child('asdf').remove();
 // }
 
-submitButton.addEventListener("click", updateDBAddNewClub);
-submitButtonDelete.addEventListener("click", updateDBDeleteClub);
+function showClub(){
+    let phi = firebase.database().ref('Clubs/');
+    console.log(phi);
+}
+
+showClub();

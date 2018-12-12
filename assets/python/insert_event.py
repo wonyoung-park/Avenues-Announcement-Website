@@ -13,6 +13,11 @@ if not creds or creds.invalid:
 GCAL = discovery.build('calendar', 'v3', http=creds.authorize(Http()))
 
 GMT_OFF = '-05:00'      # PDT/MST/GMT-7
+
+IF RECIEVE A POST REQUEST WITH EVENT DATA:
+    createEvent(data)
+
+
 EVENT = {
     'summary': 'Dinner with friends',
     'start':  {'dateTime': '2018-12-11T19:00:00%s' % GMT_OFF},
