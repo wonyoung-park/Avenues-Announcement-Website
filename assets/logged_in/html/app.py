@@ -9,7 +9,6 @@ from oauth2client import file, client, tools
 import datetime
 import time
 
-
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 store = file.Storage('../../python/storage.json')
 creds = store.get()
