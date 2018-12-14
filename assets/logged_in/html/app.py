@@ -25,13 +25,13 @@ class LoginForm(FlaskForm):
     password = PasswordField('password')
     clubname = StringField('clubname')
     facultyadvisor = StringField('facultyadvisor')
-    day = StringField('day')
+    date = StringField('date')
     startTime = StringField('startTime')
     endTime = StringField('endTime')
     room = StringField('room')
     clubdescription = StringField('clubdescription')
 
-GMT_OFF = '-05:00'      # PDT/MST/GMT-7
+GMT_OFF = "-05:00"      # PDT/MST/GMT-7
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     form = LoginForm()
@@ -41,13 +41,13 @@ def form():
         room_add_to_google_calendar = '{}'.format(form.room.data)
         facultyadvisor_add_to_google_calendar = '{}'.format(form.facultyadvisor.data)
         clubdescription_add_to_google_calendar = '{}'.format(form.clubdescription.data)
-        day_name_add_to_google_calendar = '{}'.format(form.day.data)
+        date_name_add_to_google_calendar = '{}'.format(form.date.data)
         startTime_name_add_to_google_calendar = '{}'.format(form.startTime.data)
         endTime_name_add_to_google_calendar = '{}'.format(form.endTime.data)
 
 
-        startCombinedString = day_name_add_to_google_calendar + "T:" + startTime_name_add_to_google_calendar +"%s"
-        endCombinedString = day_name_add_to_google_calendar + "T:" + endTime_name_add_to_google_calendar +"%s" 
+        startCombinedString = date_name_add_to_google_calendar + "T" + startTime_name_add_to_google_calendar + GMT_OFF
+        endCombinedString = date_name_add_to_google_calendar + "T" + endTime_name_add_to_google_calendar + GMT_OFF
         
         
         # lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
@@ -56,10 +56,10 @@ def form():
         'location': room_add_to_google_calendar,
         'description': 'Faculty Advisor: ' + facultyadvisor_add_to_google_calendar + "\n\n" + 'Club Description: ' + clubdescription_add_to_google_calendar,
         'start': {
-            'dateTime': startCombinedString % GMT_OFF
+            'dateTime': startCombinedString
         },
         'end': {
-            'dateTime': endCombinedString % GMT_OFF
+            'dateTime': endCombinedString
         },
         'recurrence': [
             'RULE:FREQ=DAILY;COUNT=2'
