@@ -28,32 +28,35 @@ class LoginForm(FlaskForm):
     room = StringField('room')
     clubdescription = StringField('clubdescription')
 
+GMT_OFF = '-05:00'      # PDT/MST/GMT-7
 @app.route('/form', methods=['GET', 'POST'])
 def form():
     form = LoginForm()
 
     if form.validate_on_submit():
-        return '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
-    return render_template('form.html', form=form)
-
-GMT_OFF = '-05:00'      # PDT/MST/GMT-7
-EVENT = {
-    'summary': 'The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data),
-    'start':  {'dateTime': '2018-12-11T19:00:00%s' % GMT_OFF},
-    'end':    {'dateTime': '2018-12-11T22:00:00%s' % GMT_OFF},
+        lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
+        EVENT = {
+    'summary': lol,
+    'start':  {'dateTime': '2018-12-14T19:00:00%s' % GMT_OFF},
+    'end':    {'dateTime': '2018-12-14T22:00:00%s' % GMT_OFF},
     'attendees': [
         {'email': 'friend1@example.com'},
         {'email': 'friend2@example.com'},
     ],
 }
+        e = GCAL.events().insert(calendarId='primary',
+                sendNotifications=True, body=EVENT).execute()
 
-e = GCAL.events().insert(calendarId='primary',
-        sendNotifications=True, body=EVENT).execute()
+        print('''*** %r event added:
+            Start: %s
+            End:   %s''' % (e['summary'].encode('utf-8'),
+                e['start']['dateTime'], e['end']['dateTime']))
+    return render_template('form.html', form=form)
 
-print('''*** %r event added:
-    Start: %s
-    End:   %s''' % (e['summary'].encode('utf-8'),
-        e['start']['dateTime'], e['end']['dateTime']))
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
