@@ -6,6 +6,9 @@ from wtforms import StringField, PasswordField, TextField
 from apiclient import discovery
 from httplib2 import Http
 from oauth2client import file, client, tools
+import datetime
+import time
+
 
 SCOPES = 'https://www.googleapis.com/auth/calendar'
 store = file.Storage('../../python/storage.json')
@@ -24,7 +27,8 @@ class LoginForm(FlaskForm):
     clubname = StringField('clubname')
     facultyadvisor = StringField('facultyadvisor')
     day = StringField('day')
-    time = StringField('time')
+    startTime = StringField('startTime')
+    endTime = StringField('endTime')
     room = StringField('room')
     clubdescription = StringField('clubdescription')
 
@@ -39,17 +43,24 @@ def form():
         facultyadvisor_add_to_google_calendar = '{}'.format(form.facultyadvisor.data)
         clubdescription_add_to_google_calendar = '{}'.format(form.clubdescription.data)
         day_name_add_to_google_calendar = '{}'.format(form.day.data)
-        time_name_add_to_google_calendar = '{}'.format(form.time.data)
+        startTime_name_add_to_google_calendar = '{}'.format(form.startTime.data)
+        endTime_name_add_to_google_calendar = '{}'.format(form.endTime.data)
+
+
+        startCombinedString = day_name_add_to_google_calendar + "T:" + startTime_name_add_to_google_calendar +"%s"
+        endCombinedString = day_name_add_to_google_calendar + "T:" + endTime_name_add_to_google_calendar +"%s" 
+        
+        
         # lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
         EVENT = {
         'summary': 'club_name_add_to_google_calendar',
         'location': room_add_to_google_calendar,
         'description': 'Faculty Advisor: ' + facultyadvisor_add_to_google_calendar + "\n\n" + 'Club Description: ' + clubdescription_add_to_google_calendar,
         'start': {
-            'dateTime': '2018-12-14T19:00:00%s' % GMT_OFF
+            'dateTime': startCombinedString % GMT_OFF
         },
         'end': {
-            'dateTime': '2018-12-14T22:00:00%s' % GMT_OFF
+            'dateTime': endCombinedString % GMT_OFF
         },
         'recurrence': [
             'RULE:FREQ=DAILY;COUNT=2'
