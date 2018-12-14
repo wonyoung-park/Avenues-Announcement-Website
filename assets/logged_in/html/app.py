@@ -38,9 +38,11 @@ def form():
         room_add_to_google_calendar = '{}'.format(form.room.data)
         facultyadvisor_add_to_google_calendar = '{}'.format(form.facultyadvisor.data)
         clubdescription_add_to_google_calendar = '{}'.format(form.clubdescription.data)
+        day_name_add_to_google_calendar = '{}'.format(form.day.data)
+        time_name_add_to_google_calendar = '{}'.format(form.time.data)
         # lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
         EVENT = {
-        'summary': club_name_add_to_google_calendar,
+        'summary': 'club_name_add_to_google_calendar',
         'location': room_add_to_google_calendar,
         'description': 'Faculty Advisor: ' + facultyadvisor_add_to_google_calendar + "\n\n" + 'Club Description: ' + clubdescription_add_to_google_calendar,
         'start': {
@@ -49,9 +51,9 @@ def form():
         'end': {
             'dateTime': '2018-12-14T22:00:00%s' % GMT_OFF
         },
-        # 'recurrence': [
-        #     'RULE:FREQ=DAILY;COUNT=2'
-        # ],
+        'recurrence': [
+            'RULE:FREQ=DAILY;COUNT=2'
+        ],
         'attendees': [
             {'email': 'lpage@example.com'},
             {'email': 'sbrin@example.com'},
