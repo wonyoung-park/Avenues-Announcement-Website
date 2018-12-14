@@ -12,8 +12,6 @@ nav ul {
     list-style: none;
 }
 
-
-
 nav ul li a {
     display: block;
     color: #444;
@@ -29,10 +27,6 @@ nav ul li {
 
 nav div:first-child {
     /* background: #222; */
-    
-}
-
-nav {
     
 }
 
