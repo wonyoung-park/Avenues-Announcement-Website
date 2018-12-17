@@ -67,10 +67,10 @@ def form():
             'RRULE:FREQ=WEEKLY;'
 
         ],
-        'attendees': [
-            {'email': 'lpage@example.com'},
-            {'email': 'sbrin@example.com'},
-        ]
+        # 'attendees': [
+        #     {'email': 'lpage@example.com'},
+        #     {'email': 'sbrin@example.com'},
+        # ]
         # 'reminders': {
         #     'useDefault': False,
         #     'overrides': [
@@ -87,7 +87,8 @@ def form():
             Start: %s
             End:   %s''' % (e['summary'].encode('utf-8'),
                 e['start']['dateTime'], e['end']['dateTime']))
-    return render_template('form.html', form=form)
+    # If the HTML is renamed, make sure to chance the file name here as a string            
+    return render_template('add_club.html', form=form)
 
 
 
