@@ -46,8 +46,8 @@ def form():
         endTime_name_add_to_google_calendar = '{}'.format(form.endTime.data)
 
 
-        startCombinedString = date_name_add_to_google_calendar + "T" + startTime_name_add_to_google_calendar + GMT_OFF
-        endCombinedString = date_name_add_to_google_calendar + "T" + endTime_name_add_to_google_calendar + GMT_OFF
+        startCombinedString = date_name_add_to_google_calendar + "T" + startTime_name_add_to_google_calendar + ':00' + '%s'
+        endCombinedString = date_name_add_to_google_calendar + "T" + endTime_name_add_to_google_calendar + ':00' + '%s'
         
         
         # lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
@@ -56,14 +56,16 @@ def form():
         'location': room_add_to_google_calendar,
         'description': 'Faculty Advisor: ' + facultyadvisor_add_to_google_calendar + "\n\n" + 'Club Description: ' + clubdescription_add_to_google_calendar,
         'start': {
-            'dateTime': startCombinedString
+            'dateTime': startCombinedString % GMT_OFF,
+            'timeZone': 'America/Los_Angeles'
         },
         'end': {
-            'dateTime': endCombinedString
+            'dateTime': endCombinedString % GMT_OFF,
+            'timeZone': 'America/Los_Angeles'
         },
-        'recurrence': [
-            'RULE:FREQ=DAILY;COUNT=2'
-        ],
+        # 'recurrence': [
+        #     'RULE:FREQ=DAILY;COUNT=2'
+        # ],
         'attendees': [
             {'email': 'lpage@example.com'},
             {'email': 'sbrin@example.com'},
