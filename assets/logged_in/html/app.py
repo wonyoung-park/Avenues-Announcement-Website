@@ -63,9 +63,10 @@ def form():
             'dateTime': endCombinedString % GMT_OFF,
             'timeZone': 'America/Los_Angeles'
         },
-        # 'recurrence': [
-        #     'RULE:FREQ=DAILY;COUNT=2'
-        # ],
+        'recurrence': [
+            'RRULE:FREQ=WEEKLY;'
+
+        ],
         'attendees': [
             {'email': 'lpage@example.com'},
             {'email': 'sbrin@example.com'},
