@@ -52,7 +52,7 @@ def form():
         
         # lol = '<h1>The Club Name is {}. The faculty advisor is {}. The day is {}. The time is {}. The room is {}. The club description is {}.'.format(form.clubname.data, form.facultyadvisor.data, form.day.data, form.time.data, form.room.data, form.clubdescription.data)
         EVENT = {
-        'summary': 'club_name_add_to_google_calendar',
+        'summary': club_name_add_to_google_calendar,
         'location': room_add_to_google_calendar,
         'description': 'Faculty Advisor: ' + facultyadvisor_add_to_google_calendar + "\n\n" + 'Club Description: ' + clubdescription_add_to_google_calendar,
         'start': {

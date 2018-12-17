@@ -7,23 +7,23 @@
        * TODO(DEVELOPER): Paste the initialization snippet from:
        * Firebase Console > Overview > Add Firebase to your web app. *
        ***************************************************************************************** --> 
-       <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
-        <script>
+       <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+      <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyDJdj6lI-EQqfaqU5hfBUMBNkbFlmVNyX0",
-            authDomain: "avenues-announcement.firebaseapp.com",
-            databaseURL: "https://avenues-announcement.firebaseio.com",
-            projectId: "avenues-announcement",
-            storageBucket: "avenues-announcement.appspot.com",
-            messagingSenderId: "730059460858"
+          apiKey: "AIzaSyDJdj6lI-EQqfaqU5hfBUMBNkbFlmVNyX0",
+          authDomain: "avenues-announcement.firebaseapp.com",
+          databaseURL: "https://avenues-announcement.firebaseio.com",
+          projectId: "avenues-announcement",
+          storageBucket: "avenues-announcement.appspot.com",
+          messagingSenderId: "730059460858"
         };
         firebase.initializeApp(config);
-        </script>
+      </script>
        <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
     <script type="text/javascript">
-      // FirebaseUI config.
+    //   // FirebaseUI config.
       var uiConfig = {
         signInSuccessUrl: '../logged_in/html/index_logged_in.html',
         signInOptions: [
@@ -45,7 +45,7 @@
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
       ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+    // </script>
   </head>
   <body>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
