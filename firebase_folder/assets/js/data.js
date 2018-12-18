@@ -119,7 +119,7 @@ const myObj =
           "Day":"Thursday",
           "Time":"11:10-12:20",
           "Room":"809",
-          "Club Description":"The Men of Color Association is an assemblage of the male students of color in the Upper Division at Avenues, with oversight provided by faculty who are also men of color. Members will meet around once every week in order "
+          "Club Description":"The Men of Color Association is an assemblage of the male students of color in the Upper Division at Avenues, with oversight provided by faculty who are also men of color. Members will meet around once every week in order."
        },
        {
           "Club Name":"Black Student Union",
@@ -130,7 +130,7 @@ const myObj =
           "Club Description":"The Black Student Union is a space where students can come together to learn and appreciate the African Diaspora culture and history. We are a safe space club that hopes to bring a different cultural perspective to the Avenues community. Everyone is welcome and we aim to teach, guide, and communicate with each other as well as our outside peers. "
        },
        {
-          "Club Name":"Committee for Social Justice ",
+          "Club Name":"Committee for Social Justice",
           "Faculty Advisor":"Chris Bolduc & Jessica Berkeley",
           "Day":"N/A",
           "Time":"N/A",
@@ -138,7 +138,7 @@ const myObj =
           "Club Description":"The Committee for Social Justice gives students a space to learn about privilege, oppression, and how to actively be involved in advocacy. "
        },
        {
-          "Club Name":"Math Team ",
+          "Club Name":"Math Team",
           "Faculty Advisor":"Cem Inaltong",
           "Day":"Thursday",
           "Time":"3:50-4:50",
@@ -146,7 +146,7 @@ const myObj =
           "Club Description":"Collaborate on some deeply rewarding, enriching and highly challenging math problems, improve your problem-solving skills and represent Avenues at local, national and international math contests."
        },
        {
-          "Club Name":"Spanish Language Club ",
+          "Club Name":"Spanish Language Club",
           "Faculty Advisor":"Diana Aboleda",
           "Day":"N/A",
           "Time":"N/A",
@@ -154,9 +154,9 @@ const myObj =
           "Club Description":"Enrich your knowledge of the Hispanic culture and improve Spanish fluency."
        },
        {
-          "Club Name":"Zero Waste Club ",
+          "Club Name":"Zero Waste Club",
           "Faculty Advisor":"Karin Shim",
-          "Day":"Thursday",
+          "Day":"   ",
           "Time":"8:00-8:30",
           "Room":"N/A",
           "Club Description":"The goal of the Zero Waste Club is to involve students to help out with the zero waste mission at Avenues. We want to educate students on the challenges that the school faces in meeting its zero waste goals and also make some changes around the school to limit waste."
