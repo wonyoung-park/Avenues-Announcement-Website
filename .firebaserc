@@ -1,5 +1,6 @@
 {
   "projects": {
-    "testingidkwhatthismeans": "avenues-announcement"
+    "testingidkwhatthismeans": "avenues-announcement",
+    "default": "avenues-announcement"
   }
 }
