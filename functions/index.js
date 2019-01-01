@@ -1,11 +1,14 @@
 const functions = require('firebase-functions');
 const express = require("express");
 const app = express();
+var path = require('path');
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 
 app.set("view engine", "ejs");
+app.use("/public", express.static(path.join(__dirname, 'public')));
+
 
 // 1. INDEX ROUTE
 
@@ -25,6 +28,6 @@ app.get("/clubs", function(req, res) {
 
 exports.app = functions.https.onRequest(app);
 
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(7000, "127.0.0.1", function() {
    console.log("The server is running!"); 
 });
