@@ -17,6 +17,8 @@ app.get("/", function(req, res) {
 });
 
 app.get("/clubs", function(req, res) {
+  // Get a reference to the database service
+
   res.render("clubs"); 
 });
 
