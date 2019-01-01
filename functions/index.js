@@ -1,7 +1,8 @@
 const functions = require('firebase-functions');
+const firebase = require("firebase-admin");
 const express = require("express");
 const app = express();
-var path = require('path');
+const path = require('path');
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -17,9 +18,22 @@ app.get("/", function(req, res) {
 });
 
 app.get("/clubs", function(req, res) {
-  // Get a reference to the database service
+// Retrieve Club Data Function
+let database = firebase.database();
+const clubsRef = database.ref('Clubs');
+clubsRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      const childData = childSnapshot.val();
+      console.log(childData);
+    });
+});
 
   res.render("clubs"); 
+});
+
+app.get("/clubs/new", function(req, res) {
+
+  res.render("new"); 
 });
 
 // 2. NEW ROUTE

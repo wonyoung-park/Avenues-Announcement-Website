@@ -1,11 +1,18 @@
 // Get a reference to the database service
-let database = firebase.database().ref();
+let database = firebase.database();
 //var ref = new Firebase("https://avenues-announcement.firebaseio.com");
 
 //  * Updates the database with the username and message.
 //  */
 
-
+// Retrieve Club Data Function
+// const clubsRef = database.ref('Clubs');
+// clubsRef.on('value', function(snapshot) {
+//     snapshot.forEach(function(childSnapshot) {
+//       const childData = childSnapshot.val();
+//       console.log(childData);
+//     });
+// });
 
 
 function updateDBAddNewClub(event){
@@ -32,11 +39,11 @@ function updateDBAddNewClub(event){
     
 
     // what was orginally here
-    firebase.database().ref('Clubs/' + addClubName).set(newClubToAddToDB);
+    firebase.database().ref('Clubs/' + addClubName).push(newClubToAddToDB);
     firebase.database().ref('Clubs').orderByChild('clubName');
     let addClubForm = $(".form");
     
-    addClubForm.css("display", "none");
+    // addClubForm.css("display", "none");
         
 }
 
